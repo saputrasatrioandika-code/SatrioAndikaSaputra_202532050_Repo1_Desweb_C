@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <title>Logo Tirta Gambut</title>
+  <circle cx="48" cy="48" r="46" fill="#eef5f1" stroke="#2f5d46" stroke-width="3"/>
+  <rect x="14" y="60" width="68" height="8" rx="2" fill="#6b4a2f"/>
+  <rect x="18" y="68" width="60" height="7" rx="2" fill="#4a3220"/>
+  <path d="M48 16 C40 30 33 38 33 47 a15 15 0 0 0 30 0 C63 38 56 30 48 16 Z" fill="#2b7bb9"/>
+  <path d="M42 46 a7 7 0 0 0 7 8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

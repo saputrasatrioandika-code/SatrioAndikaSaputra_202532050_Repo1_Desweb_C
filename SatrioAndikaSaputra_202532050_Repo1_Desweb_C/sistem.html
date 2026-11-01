@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cara kerja Tirta Gambut: dari sensor lapangan, jaringan LoRa, penilaian status risiko, hingga pembasahan otomatis.">
+  <title>Cara Kerja Sistem | Tirta Gambut</title>
+</head>
+<body>
+  <a href="#konten">Langsung ke konten utama</a>
+
+  <header>
+    <img src="img/logo-tirta-gambut.svg" alt="Logo Tirta Gambut berupa tetesan air di atas lapisan tanah gambut" width="96" height="96">
+    <p><strong>Tirta Gambut</strong></p>
+    <p>Sistem Peringatan Dini dan Pembasahan Otomatis Lahan Gambut</p>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="sistem.html" aria-current="page">Cara Kerja Sistem</a></li>
+      <li><a href="pemantauan.html">Data Titik Pantau</a></li>
+      <li><a href="lapor.html">Lapor Kejadian</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten">
+    <h1>Cara Kerja Sistem Tirta Gambut</h1>
+    <p>Sistem bekerja sebagai satu siklus tertutup: data diambil di lapangan, dinilai menjadi status risiko, lalu status tersebut memicu peringatan dan tindakan pembasahan. Halaman ini menjelaskan siklus tersebut dari hulu ke hilir.</p>
+
+    <figure>
+      <img src="img/alur-sistem.svg" alt="Diagram alur sistem: node sensor di lahan gambut mengirim data lewat jaringan LoRa ke gateway, gateway meneruskan ke server penilai status, server mengirim peringatan ke warga dan perintah ke pompa pembasahan" width="720" height="260">
+      <figcaption>Gambar 2. Alur data dan tindakan pada Tirta Gambut</figcaption>
+    </figure>
+
+    <section aria-labelledby="judul-komponen">
+      <h2 id="judul-komponen">Komponen Utama</h2>
+
+      <article>
+        <h3>Node Sensor Bertenaga Surya</h3>
+        <p>Node dipasang di titik rawan dan mengukur kondisi gambut secara berkala. Panel surya kecil menjaga node tetap menyala tanpa jaringan listrik.</p>
+        <ul>
+          <li>Sensor tinggi muka air tanah</li>
+          <li>Sensor kelembapan tanah gambut</li>
+          <li>Sensor suhu dan kelembapan udara</li>
+          <li>Pengukur curah hujan</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Jaringan LoRa dan Gateway</h3>
+        <p>Lahan gambut umumnya jauh dari sinyal seluler. Karena itu, data dikirim memakai LoRa (<i lang="en">Long Range</i>), yaitu teknologi radio berdaya rendah yang mampu menjangkau beberapa kilometer, menuju gateway yang terhubung ke internet.</p>
+      </article>
+
+      <article>
+        <h3>Penilaian Status dan Pompa Pembasahan</h3>
+        <p>Server menggabungkan seluruh parameter menjadi satu status risiko. Ketika status mencapai Siaga, pompa di kanal terdekat menyala dan mengalirkan air ke sekitar titik pantau sampai kondisi kembali aman.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="judul-status">
+      <h2 id="judul-status">Empat Tingkat Status Risiko</h2>
+      <p>Status dibuat bertingkat agar warga dan petugas dapat menyesuaikan tindakan dengan tingkat bahaya, bukan sekadar menerima tanda bahaya atau tidak bahaya.</p>
+      <table>
+        <caption>Tabel 2. Makna status dan tindakan yang dilakukan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Status</th>
+            <th scope="col">Kondisi Gambut</th>
+            <th scope="col">Tindakan Sistem</th>
+            <th scope="col">Tindakan Warga dan Petugas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Aman</th>
+            <td>Basah, muka air tinggi</td>
+            <td>Pemantauan rutin</td>
+            <td>Tidak ada tindakan khusus</td>
+          </tr>
+          <tr>
+            <th scope="row">Waspada</th>
+            <td>Mulai mengering</td>
+            <td>Frekuensi pengukuran ditingkatkan</td>
+            <td>Periksa sekat kanal di sekitar titik</td>
+          </tr>
+          <tr>
+            <th scope="row">Siaga</th>
+            <td>Kering, rawan terbakar</td>
+            <td>Pompa pembasahan menyala dan peringatan dikirim</td>
+            <td>Tingkatkan patroli, larang pembakaran</td>
+          </tr>
+          <tr>
+            <th scope="row">Awas</th>
+            <td>Sangat kering atau ada laporan asap</td>
+            <td>Pompa tetap menyala dan peringatan diulang</td>
+            <td>Siagakan regu pemadam dan hubungi BPBD</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="judul-batasan">
+      <h2 id="judul-batasan">Batasan Sistem</h2>
+      <p>Pompa hanya mampu membasahi area di sekitar titik pantau, sehingga sistem ini melengkapi, bukan menggantikan, sekat kanal dan patroli warga. Laporan dari warga tetap dibutuhkan untuk kejadian di luar jangkauan sensor melalui halaman <a href="lapor.html">Lapor Kejadian</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tirta Gambut. Proyek Laporan Praktikum 1 Desain Web, Sistem Informasi, Institut Teknologi PLN.</p>
+    <p>Seluruh data pada website ini merupakan data simulasi untuk keperluan pembelajaran.</p>
+    <address>Dibuat oleh Satrio Andika Saputra (202532050), Kelas C.</address>
+  </footer>
+</body>
+</html>

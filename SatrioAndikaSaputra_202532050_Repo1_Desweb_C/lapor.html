@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulir laporan warga untuk melaporkan asap, titik api, gambut kering, atau kanal surut kepada tim Tirta Gambut.">
+  <title>Lapor Kejadian | Tirta Gambut</title>
+</head>
+<body>
+  <a href="#konten">Langsung ke konten utama</a>
+
+  <header>
+    <img src="img/logo-tirta-gambut.svg" alt="Logo Tirta Gambut berupa tetesan air di atas lapisan tanah gambut" width="96" height="96">
+    <p><strong>Tirta Gambut</strong></p>
+    <p>Sistem Peringatan Dini dan Pembasahan Otomatis Lahan Gambut</p>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="sistem.html">Cara Kerja Sistem</a></li>
+      <li><a href="pemantauan.html">Data Titik Pantau</a></li>
+      <li><a href="lapor.html" aria-current="page">Lapor Kejadian</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten">
+    <h1>Lapor Kejadian di Lahan Gambut</h1>
+    <p>Warga adalah sensor terbaik di luar jangkauan alat. Isi formulir di bawah ini jika Anda menemukan asap, titik api, gambut yang retak, atau kanal yang surut. Kolom bertanda (wajib) harus diisi.</p>
+
+    <section aria-labelledby="judul-sebelum">
+      <h2 id="judul-sebelum">Sebelum Mengisi</h2>
+      <ul>
+        <li>Pastikan Anda berada di tempat aman dan tidak mendekati sumber api.</li>
+        <li>Untuk kebakaran yang sedang membesar, hubungi BPBD atau regu pemadam setempat terlebih dahulu.</li>
+        <li>Foto lokasi akan sangat membantu petugas memastikan kejadian.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="judul-form">
+      <h2 id="judul-form">Formulir Laporan Warga</h2>
+
+      <!-- Form belum terhubung ke server. Saat dikirim, browser membuka halaman konfirmasi. -->
+      <form action="terima-kasih.html" method="get">
+
+        <fieldset>
+          <legend>Identitas Pelapor</legend>
+
+          <p>
+            <label for="nama">Nama lengkap (wajib)</label><br>
+            <input type="text" id="nama" name="nama" minlength="3" maxlength="60" autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="email">Email (wajib)</label><br>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@contoh.com" required>
+          </p>
+
+          <p>
+            <label for="telepon">Nomor HP aktif (wajib, 10 sampai 13 angka)</label><br>
+            <input type="tel" id="telepon" name="telepon" pattern="[0-9]{10,13}" autocomplete="tel" placeholder="081234567890" title="Masukkan 10 sampai 13 angka tanpa spasi atau tanda hubung" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Lokasi dan Waktu</legend>
+
+          <p>
+            <label for="blok">Blok terdekat (wajib)</label><br>
+            <select id="blok" name="blok" required>
+              <option value="">Pilih blok</option>
+              <option value="blok-a">Blok A (GB-01, GB-02)</option>
+              <option value="blok-b">Blok B (GB-03, GB-04)</option>
+              <option value="blok-c">Blok C (GB-05, GB-06)</option>
+              <option value="luar">Di luar blok pantau</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="patokan">Patokan lokasi (wajib)</label><br>
+            <input type="text" id="patokan" name="patokan" minlength="5" maxlength="120" placeholder="Contoh: 200 meter dari jembatan kanal" required>
+          </p>
+
+          <p>
+            <label for="tanggal">Tanggal kejadian (wajib)</label><br>
+            <input type="date" id="tanggal" name="tanggal" min="2026-01-01" max="2026-12-31" required>
+          </p>
+
+          <p>
+            <label for="jam">Perkiraan jam kejadian</label><br>
+            <input type="time" id="jam" name="jam">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Jenis Kejadian (wajib, pilih satu)</legend>
+
+          <input type="radio" id="jenis-asap" name="jenis" value="asap" required>
+          <label for="jenis-asap">Asap tanpa api terlihat</label><br>
+
+          <input type="radio" id="jenis-api" name="jenis" value="titik-api">
+          <label for="jenis-api">Titik api atau bara</label><br>
+
+          <input type="radio" id="jenis-retak" name="jenis" value="gambut-retak">
+          <label for="jenis-retak">Gambut kering atau retak</label><br>
+
+          <input type="radio" id="jenis-kanal" name="jenis" value="kanal-surut">
+          <label for="jenis-kanal">Air kanal surut drastis</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Kondisi Sekitar (boleh lebih dari satu)</legend>
+
+          <input type="checkbox" id="kondisi-angin" name="kondisi" value="angin-kencang">
+          <label for="kondisi-angin">Angin bertiup kencang</label><br>
+
+          <input type="checkbox" id="kondisi-rumah" name="kondisi" value="dekat-permukiman">
+          <label for="kondisi-rumah">Dekat permukiman warga</label><br>
+
+          <input type="checkbox" id="kondisi-akses" name="kondisi" value="akses-sulit">
+          <label for="kondisi-akses">Akses jalan sulit dilalui</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Rincian Laporan</legend>
+
+          <p>
+            <label for="luas">Perkiraan luas area terdampak (meter persegi)</label><br>
+            <input type="number" id="luas" name="luas" min="1" max="100000" step="1">
+          </p>
+
+          <p>
+            <label for="uraian">Uraian kejadian (wajib, minimal 20 karakter)</label><br>
+            <textarea id="uraian" name="uraian" rows="5" cols="50" minlength="20" maxlength="500" required></textarea>
+          </p>
+
+          <p>
+            <label for="foto">Foto lokasi (opsional, format gambar)</label><br>
+            <input type="file" id="foto" name="foto" accept="image/*">
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="persetujuan" name="persetujuan" value="setuju" required>
+          <label for="persetujuan">Saya menyatakan laporan ini sesuai kondisi yang saya lihat (wajib)</label>
+        </p>
+
+        <p>
+          <button type="submit">Kirim Laporan</button>
+          <button type="reset">Kosongkan Formulir</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tirta Gambut. Proyek Laporan Praktikum 1 Desain Web, Sistem Informasi, Institut Teknologi PLN.</p>
+    <p>Seluruh data pada website ini merupakan data simulasi untuk keperluan pembelajaran.</p>
+    <address>Dibuat oleh Satrio Andika Saputra (202532050), Kelas C.</address>
+  </footer>
+</body>
+</html>

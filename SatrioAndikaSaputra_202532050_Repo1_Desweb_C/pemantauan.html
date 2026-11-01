@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data simulasi titik pantau Tirta Gambut: tinggi muka air, kelembapan tanah, status risiko, dan status pompa.">
+  <title>Data Titik Pantau | Tirta Gambut</title>
+</head>
+<body>
+  <a href="#konten">Langsung ke konten utama</a>
+
+  <header>
+    <img src="img/logo-tirta-gambut.svg" alt="Logo Tirta Gambut berupa tetesan air di atas lapisan tanah gambut" width="96" height="96">
+    <p><strong>Tirta Gambut</strong></p>
+    <p>Sistem Peringatan Dini dan Pembasahan Otomatis Lahan Gambut</p>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="sistem.html">Cara Kerja Sistem</a></li>
+      <li><a href="pemantauan.html" aria-current="page">Data Titik Pantau</a></li>
+      <li><a href="lapor.html">Lapor Kejadian</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten">
+    <h1>Data Titik Pantau</h1>
+    <p>Halaman ini menampilkan kondisi enam titik pantau pada pembaruan terakhir. Data bersifat simulasi dan disusun untuk memperlihatkan bagaimana informasi pemantauan disajikan kepada warga dan petugas.</p>
+
+    <figure>
+      <img src="img/peta-titik-pantau.svg" alt="Peta skematis enam titik pantau dari GB-01 sampai GB-06 di sepanjang kanal, dengan titik GB-04 ditandai berstatus Siaga" width="640" height="300">
+      <figcaption>Gambar 3. Sebaran titik pantau di sepanjang kanal (skematis)</figcaption>
+    </figure>
+
+    <section aria-labelledby="judul-tabel">
+      <h2 id="judul-tabel">Kondisi Terkini</h2>
+      <p><time datetime="2026-10-28T07:00">Pembaruan: 28 Oktober 2026, pukul 07.00 WIB</time></p>
+      <table>
+        <caption>Tabel 3. Kondisi titik pantau (data simulasi)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kode Titik</th>
+            <th scope="col">Lokasi</th>
+            <th scope="col">Muka Air (cm di bawah permukaan)</th>
+            <th scope="col">Kelembapan Tanah (%)</th>
+            <th scope="col">Status</th>
+            <th scope="col">Pompa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">GB-01</th>
+            <td>Blok A, hulu kanal</td>
+            <td>18</td>
+            <td>78</td>
+            <td>Aman</td>
+            <td>Mati</td>
+          </tr>
+          <tr>
+            <th scope="row">GB-02</th>
+            <td>Blok A, tengah</td>
+            <td>22</td>
+            <td>74</td>
+            <td>Aman</td>
+            <td>Mati</td>
+          </tr>
+          <tr>
+            <th scope="row">GB-03</th>
+            <td>Blok B, dekat kebun warga</td>
+            <td>34</td>
+            <td>61</td>
+            <td>Waspada</td>
+            <td>Mati</td>
+          </tr>
+          <tr>
+            <th scope="row">GB-04</th>
+            <td>Blok B, tepi jalan desa</td>
+            <td>47</td>
+            <td>42</td>
+            <td>Siaga</td>
+            <td>Menyala</td>
+          </tr>
+          <tr>
+            <th scope="row">GB-05</th>
+            <td>Blok C, dekat sekat kanal</td>
+            <td>31</td>
+            <td>64</td>
+            <td>Waspada</td>
+            <td>Mati</td>
+          </tr>
+          <tr>
+            <th scope="row">GB-06</th>
+            <td>Blok C, hilir kanal</td>
+            <td>20</td>
+            <td>76</td>
+            <td>Aman</td>
+            <td>Mati</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="judul-baca">
+      <h2 id="judul-baca">Cara Membaca Data</h2>
+
+      <h3>Istilah pada Tabel</h3>
+      <dl>
+        <dt>Muka air</dt>
+        <dd>Jarak permukaan air tanah dari permukaan gambut. Semakin besar angkanya, semakin dalam air dan semakin kering lapisan atas gambut.</dd>
+        <dt>Kelembapan tanah</dt>
+        <dd>Persentase kandungan air pada lapisan atas gambut, tempat api biasanya mulai menjalar.</dd>
+        <dt>Status</dt>
+        <dd>Hasil penilaian gabungan seluruh parameter. Penjelasan tiap status ada di halaman <a href="sistem.html">Cara Kerja Sistem</a>.</dd>
+      </dl>
+
+      <h3>Catatan Penting</h3>
+      <ul>
+        <li>Muka air yang lebih dalam dari 40 cm menjadi tanda awal gambut rawan terbakar.</li>
+        <li>Satu parameter saja belum cukup, karena itu status selalu dinilai dari beberapa parameter sekaligus.</li>
+        <li>Kondisi di luar keenam titik ini hanya dapat diketahui dari laporan warga.</li>
+      </ul>
+    </section>
+
+    <aside aria-labelledby="judul-ajakan">
+      <h2 id="judul-ajakan">Melihat Kondisi yang Tidak Tercatat?</h2>
+      <p>Sensor hanya mencakup titik tertentu. Bantu kami dengan <a href="lapor.html">melaporkan kejadian</a> yang Anda temukan di lapangan.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Tirta Gambut. Proyek Laporan Praktikum 1 Desain Web, Sistem Informasi, Institut Teknologi PLN.</p>
+    <p>Seluruh data pada website ini merupakan data simulasi untuk keperluan pembelajaran.</p>
+    <address>Dibuat oleh Satrio Andika Saputra (202532050), Kelas C.</address>
+  </footer>
+</body>
+</html>

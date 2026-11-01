@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tirta Gambut, konsep sistem peringatan dini dan pembasahan otomatis lahan gambut untuk mencegah kebakaran.">
+  <title>Beranda | Tirta Gambut</title>
+</head>
+<body>
+  <!-- Tautan lompat: membantu pengguna keyboard dan pembaca layar langsung ke isi utama -->
+  <a href="#konten">Langsung ke konten utama</a>
+
+  <header>
+    <img src="img/logo-tirta-gambut.svg" alt="Logo Tirta Gambut berupa tetesan air di atas lapisan tanah gambut" width="96" height="96">
+    <p><strong>Tirta Gambut</strong></p>
+    <p>Sistem Peringatan Dini dan Pembasahan Otomatis Lahan Gambut</p>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="index.html" aria-current="page">Beranda</a></li>
+      <li><a href="sistem.html">Cara Kerja Sistem</a></li>
+      <li><a href="pemantauan.html">Data Titik Pantau</a></li>
+      <li><a href="lapor.html">Lapor Kejadian</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten">
+    <h1>Menjaga Gambut Tetap Basah Sebelum Api Muncul</h1>
+    <p>Tirta Gambut adalah konsep sistem yang memantau kondisi lahan gambut secara berkala, memberi peringatan bertingkat kepada warga dan petugas, lalu menjalankan pembasahan di titik rawan ketika gambut mulai mengering. Website ini menjelaskan cara kerja sistem, menampilkan contoh data pemantauan, dan menyediakan formulir bagi warga untuk melaporkan kejadian di lapangan.</p>
+
+    <figure>
+      <img src="img/ilustrasi-lahan-gambut.svg" alt="Ilustrasi penampang lahan gambut: lapisan atas mengering ketika muka air tanah turun di bawah 40 sentimeter, sedangkan lapisan bawah masih jenuh air" width="640" height="320">
+      <figcaption>Gambar 1. Penampang lahan gambut saat muka air tanah turun</figcaption>
+    </figure>
+
+    <section aria-labelledby="judul-masalah">
+      <h2 id="judul-masalah">Mengapa Lahan Gambut Mudah Terbakar?</h2>
+      <p>Gambut terbentuk dari sisa tumbuhan yang tertimbun dalam kondisi jenuh air selama ribuan tahun. Selama basah, gambut menyimpan karbon dan sulit terbakar. Masalah muncul ketika kanal drainase menurunkan muka air tanah. Lapisan atas gambut mengering dan api dapat menjalar di bawah permukaan, sehingga sulit dipadamkan dan menghasilkan kabut asap yang luas.</p>
+
+      <h3>Kelemahan Pemantauan yang Ada</h3>
+      <ul>
+        <li>Banyak pemantauan masih mengandalkan satu batas tinggi muka air saja.</li>
+        <li>Peringatan berhenti pada notifikasi, sementara tindakan menunggu petugas tiba di lokasi.</li>
+        <li>Detektor api bersifat reaktif karena baru bekerja setelah kebakaran terjadi.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="judul-solusi">
+      <h2 id="judul-solusi">Apa yang Dilakukan Tirta Gambut?</h2>
+      <p>Tirta Gambut menggabungkan beberapa parameter lapangan menjadi satu status risiko yang mudah dipahami, kemudian menghubungkan status tersebut dengan tindakan nyata.</p>
+      <ol>
+        <li><strong>Memantau</strong> tinggi muka air, kelembapan tanah, kondisi udara, dan curah hujan.</li>
+        <li><strong>Menilai</strong> risiko kekeringan menjadi empat status: Aman, Waspada, Siaga, dan Awas.</li>
+        <li><strong>Memperingatkan</strong> warga dan petugas melalui dasbor dan pesan singkat.</li>
+        <li><strong>Bertindak</strong> dengan menyalakan pompa pembasahan di titik yang berstatus Siaga atau Awas.</li>
+      </ol>
+      <p>Penjelasan lengkap tiap tahap tersedia di halaman <a href="sistem.html">Cara Kerja Sistem</a>.</p>
+    </section>
+
+    <section aria-labelledby="judul-ringkasan">
+      <h2 id="judul-ringkasan">Ringkasan Kondisi Titik Pantau</h2>
+      <table>
+        <caption>Tabel 1. Jumlah titik pantau per status (data simulasi)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Status</th>
+            <th scope="col">Jumlah Titik</th>
+            <th scope="col">Pompa Aktif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Aman</th>
+            <td>3</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">Waspada</th>
+            <td>2</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">Siaga</th>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">Awas</th>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">Total</th>
+            <td>6</td>
+            <td>1</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p>Rincian setiap titik dapat dilihat di halaman <a href="pemantauan.html">Data Titik Pantau</a>. Jika Anda melihat asap, titik api, atau gambut yang retak, segera <a href="lapor.html">laporkan kejadian</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tirta Gambut. Proyek Laporan Praktikum 1 Desain Web, Sistem Informasi, Institut Teknologi PLN.</p>
+    <p>Seluruh data pada website ini merupakan data simulasi untuk keperluan pembelajaran.</p>
+    <address>Dibuat oleh Satrio Andika Saputra (202532050), Kelas C.</address>
+  </footer>
+</body>
+</html>
